@@ -22,6 +22,7 @@ body {
     padding: 0px;
 }
 
+/* Header base: móvil */
 header {
     background-color: rgb(31, 41, 55);
     padding: 16px;
@@ -31,49 +32,50 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px 0 20px;
+    padding: 20px 0;
 }
 
 .logo {
     height: 80px;
 }
 
+/* Hero base: móvil */
 .hero {
     margin-bottom: 0px;
     color: white;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
+	padding: 0 16px;
 
     & h1 {
         margin-top: 0, 0, 15px;
         color: white;
         font-family: Roboto, sans-serif;
-
-		font-size: 48px;
+		font-size: 32px;
 		font-weight: 900;
     }
 
 	& p {
 		color: #E5E7EB;
-		font-size: 18px;
+		font-size: 16px;
     	line-height: 1.6;
     	margin: 0 0 25px;
 	}
 }
 
 .texto-hero {
-	width: 470px;
+	width: 100%;
 }
 
 .imagen-cafe img {
-    width: 500px;
-	height: auto;
-    max-width: 100%;
-    
+    width: 100px;	
+    max-width: 320%;
+	height: auto;    
 }
 
+/* Botones base */
 button {
 	border-radius: 8px;
 	padding: 8px 20px;
@@ -102,35 +104,38 @@ button {
 	color:  rgb(56, 130, 246);
 }
 
+/* Resto de secciones en móvil */
+
 .contenedor-descubre {
     width: 100%;
-    max-width: none;
     margin: 0px;
     padding: 20px 0px 0px;
     background-color: white;
-    text-align: center;
-	
+    text-align: center;	
 }
 
 .descubre {
-	font-size: 60px;
+	font-size: 36px;
 	padding: 0px 20px 30px; 
 	color: rgb(0, 0, 0);
 }
 
 h3 {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 400p;
 }
 
 .contenedor-tarjetas {
     padding: 0px 40px 15px;
+
     & .marco-tarjeta {
-        width: 180px;
-        height: 180px;
+        width: 100%;
+        max-width: 180px;
+		height: 180px;
         border-radius: 12px;
         border: 4px solid rgb(0, 102, 255);
         box-sizing: border-box;
+		margin: 0 auto 15px;
     }
 }
 
@@ -149,7 +154,7 @@ nav a {
 
 .cita {
     background-color: rgb(229, 231, 235);
-    min-height: 230px;
+    min-height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,22 +171,22 @@ nav a {
 .cita p {
     margin: 0px;
     color: rgb(31, 41, 55);
-    font-size: 26px;
+    font-size: 20px;
     font-style: italic;
     line-height: 1.5;
-    text-align: justify;
+    text-align: center;
 }
 
 .cita .autor {
     text-align: right;
     margin-top: 20px;
     font-weight: 400;
-	font-size: 22px;
+	font-size: 18px;
 }
 
 .contenedor-cta {
 	background-color: white;
-	padding: 70px 12%;
+	 padding: 40px 16px;
 }
 
 .cta {
@@ -189,14 +194,18 @@ nav a {
     color: white;
 
 	border-radius: 12px;
-	padding: 16px 70px;
+	padding: 16px;
 
 	display: flex;
-	justify-content: space-between;
-	align-items: center;	
+	flex-direction: column;
+	gap: 15px;
+	align-items: center;
+	text-align: center;	
 }
 
-
+.cta-text {
+	font-size: 20px;
+}
 
 footer {
     background: rgb(31, 41, 55);
@@ -205,18 +214,87 @@ footer {
 	padding: 30px;
 }
 
-@media (min-width: 768px) {
-	.contenedor-tarjetas {
-		display: flex;
-		justify-content: center;
-		gap: 35px;
-	}
 
-	nav ul {
-		display: flex;
-		flex-direction: row;
-		gap: 25px;	
-		margin: 0;
-		padding: 0;
-	}
+
+@media (min-width: 768px) {
+
+	 /* Header desktop */
+
+header {
+	padding: 16px 250px 80px;
 }
+
+  /* Hero desktop */
+.hero {
+    flex-direction: row;
+	justify-content: space-between;
+    padding: 0;
+}
+
+.contenedor-tarjetas {
+	display: flex;
+	justify-content: center;
+	gap: 35px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+ .texto-hero {
+    width: 470px;
+}
+
+.imagen-cafe img {
+	width: 500px;
+    max-width: 100%;
+}
+
+ /* Tarjetas en fila */
+.contenedor-tarjetas {
+	display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 0 40px 15px;
+  }
+
+.contenedor-tarjetas .marco-tarjeta {
+    margin: 0;
+}
+
+/* Navegación horizontal */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+
+/* Cita: texto justificado solo en desktop */
+.cita p {
+    text-align: justify;
+}
+
+.cita .autor {
+    text-align: right;
+}
+
+  /* CTA en fila */
+.contenedor-cta {
+    padding: 70px 12%;
+  }
+
+.cta {
+    padding: 16px 70px;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+
