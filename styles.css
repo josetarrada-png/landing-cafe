@@ -186,7 +186,7 @@ nav a {
 
 .contenedor-cta {
 	background-color: white;
-	 padding: 40px 16px;
+	padding: 40px 16px;
 }
 
 .cta {
@@ -201,6 +201,7 @@ nav a {
 	gap: 15px;
 	align-items: center;
 	text-align: center;	
+	width: 100%; 
 }
 
 .cta-text {
