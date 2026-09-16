@@ -24,7 +24,7 @@ body {
 
 header {
     background-color: rgb(31, 41, 55);
-    padding: 16px 250px 80px;
+    padding: 16px;
 }
 
 .navegacion {
@@ -81,8 +81,7 @@ button {
 	border: none;
 	font-size: 16px;
 
-	&.hero-button {
-		
+	&.hero-button {		
 		background-color: rgb(141, 141, 240);
 		color: white;	
 		
