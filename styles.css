@@ -237,6 +237,7 @@ header {
 .hero {
     flex-direction: row;
 	justify-content: space-between;
+	align-items: flex-end;
     padding: 0;
 }
 
@@ -261,7 +262,7 @@ header {
 .imagen-cafe {
   width: 100%;
   max-width: 480px; /* ancho máximo que quieres en móvil */
-  margin: 0 auto;   /* centrada */
+  margin: 0;   /* centrada */
 }
 
 .imagen-cafe img {
